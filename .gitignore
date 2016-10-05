@@ -1,0 +1,4 @@
+.vagrant
+build.log
+*.box
+packer_cache

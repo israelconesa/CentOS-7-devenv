@@ -1,0 +1,51 @@
+{
+  "variables": {
+     "proxy": "{{env `HTTP_PROXY`}}",
+     "no_proxy": "{{env `NO_PROXY`}}"
+   },
+  "builders": [
+    {
+      "boot_command": [
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/installGUI.cfg <enter><wait>"
+      ],
+      "boot_wait": "5s",
+      "guest_os_type": "RedHat_64",
+      "http_directory": "kickstart",
+      "iso_checksum": "c875b0f1dabda14f00a3e261d241f63e",
+      "iso_checksum_type": "md5",
+      "iso_url": "file:///C:/CentOS isos/CentOS-7-x86_64-DVD-1511.iso",
+      "shutdown_command": "sudo -S shutdown -P now",
+      "ssh_password": "password",
+      "ssh_username": "root",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "10000s",
+      "type": "virtualbox-iso"
+    }
+  ],
+  "post-processors": [
+    {
+      "output": "CentOS_7_GUI.box",
+      "type": "vagrant"
+    }
+  ],
+  "provisioners": [
+    {
+      "environment_vars": [
+        "PROXY={{user `proxy`}}",
+        "NO_PROXY={{user `no_proxy`}}"
+      ],
+      "script": "scripts/00-proxy.sh",
+      "type": "shell"
+    },
+    {
+      "scripts": [
+        "scripts/01-packages.sh",
+        "scripts/02-vagrant.sh",
+        "scripts/03-docker.sh",
+		"scripts/04-java.sh",
+        "scripts/05-clean.sh"
+      ],
+      "type": "shell"
+    }
+  ]
+}

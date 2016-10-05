@@ -1,0 +1,17 @@
+{
+  "name": "CentOS_7.box",
+  "description": "CentOS 7 box",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "providers": [
+        {
+          "name": "virtualbox",
+          "url": "file://C:/devtools/code/CentOS-7-baseline/packer/CentOS_7_GUI.box",
+          "checksum": "439245a20fe34cf645bbc1be59481067",
+          "checksum_type": "md5"
+        }
+      ]
+    }
+  ]
+}
