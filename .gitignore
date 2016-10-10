@@ -1,4 +1,10 @@
 .vagrant
 build.log
 *.box
+*.vmdk
+*.ovf
+*.ova
+*.iso
+*.vdi
 packer_cache
+.machines

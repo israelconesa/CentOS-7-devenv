@@ -8,7 +8,7 @@
         {
           "name": "virtualbox",
           "url": "file://C:/devtools/code/CentOS-7-baseline/packer/CentOS_7_GUI.box",
-          "checksum": "439245a20fe34cf645bbc1be59481067",
+          "checksum": "5978f66978e26b1190ad23c6b9a7f087",
           "checksum_type": "md5"
         }
       ]

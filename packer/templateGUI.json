@@ -34,16 +34,30 @@
         "PROXY={{user `proxy`}}",
         "NO_PROXY={{user `no_proxy`}}"
       ],
-      "script": "scripts/00-proxy.sh",
+      "scripts": [
+        "scripts/00-proxy.sh"
+      ],
+      "type": "shell"
+    },
+    {
+      "inline": [
+        "yum update -e 0 -y"
+      ],
       "type": "shell"
     },
     {
       "scripts": [
-        "scripts/01-packages.sh",
-        "scripts/02-vagrant.sh",
-        "scripts/03-docker.sh",
-		"scripts/04-java.sh",
-        "scripts/05-clean.sh"
+        "scripts/01-vagrant.sh"
+      ],
+      "type": "shell"
+    },
+    {
+      "inline": [
+        "yum -y clean all",
+        "dd if=/dev/zero of=/EMPTY bs=1M",
+        "rm -f /EMPTY",
+        "sync",
+        "sync"
       ],
       "type": "shell"
     }
