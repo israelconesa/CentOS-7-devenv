@@ -7,7 +7,7 @@
       "providers": [
         {
           "name": "virtualbox",
-          "url": "file://C:/devtools/code/CentOS-7-baseline/packer/CentOS_7_GUI.box",
+          "url": "/home/israelconesa/Development/.../CentOS_7_GUI.box",
           "checksum": "5978f66978e26b1190ad23c6b9a7f087",
           "checksum_type": "md5"
         }
