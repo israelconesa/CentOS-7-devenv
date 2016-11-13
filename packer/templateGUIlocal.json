@@ -12,7 +12,7 @@
       "http_directory": "kickstart",
       "iso_checksum": "c875b0f1dabda14f00a3e261d241f63e",
       "iso_checksum_type": "md5",
-      "iso_url": "http://centos.serverspace.co.uk/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1511.iso",
+      "iso_url": "file:///home/israelconesa/Downloads/ISOs/CentOS-7-x86_64-DVD-1511.iso",
       "shutdown_command": "sudo -S shutdown -P now",
       "ssh_password": "password",
       "ssh_username": "root",
@@ -33,15 +33,8 @@
         "NO_PROXY={{user `no_proxy`}}"
       ],
       "scripts": [
-        "scripts/01-vagrant.sh"
-      ],
-      "type": "shell"
-    },
-    {
-      "scripts": [
-        "scripts/02-docker.sh",
-        "scripts/03-java.sh",
-        "scripts/04-clean.sh"
+        "scripts/01-vagrant.sh",
+        "scripts/02-clean.sh"
       ],
       "type": "shell"
     }

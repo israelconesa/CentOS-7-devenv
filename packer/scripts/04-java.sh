@@ -21,5 +21,8 @@ chmod +x /etc/profile.d/java.sh
 
 source /etc/profile.d/java.sh
 
+# packer box comes with openjdk as default so must set the right alternative
+alternatives --set java /usr/java/jdk1.8.0_112/jre/bin/java
+
 # remove rpm
 rm -rf jdk-8u112-linux-x64.rpm

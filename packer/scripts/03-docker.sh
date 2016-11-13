@@ -9,8 +9,7 @@ systemctl start docker
 # flush changes to service
 systemctl daemon-reload
 
-# create docker group and add user
-groupadd docker
+# add user to docker group
 usermod -aG docker vagrant
 
 # Ensure docker service always starts
