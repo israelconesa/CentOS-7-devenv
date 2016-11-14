@@ -31,5 +31,5 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "packer/scripts/03-docker.sh"
   config.vm.provision "shell", path: "packer/scripts/04-java.sh"
   config.vm.provision "shell", path: "packer/scripts/05-maven.sh"
-  #config.vm.provison "shell", path: "packer/scripts/06-intellij.sh" ???
+  config.vm.provision "shell", path: "packer/scripts/06-intellij.sh"
 end
