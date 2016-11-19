@@ -11,7 +11,7 @@ yum -y localinstall jdk-8u112-linux-x64.rpm
 # setup global environment variables
 cat > /etc/profile.d/java.sh <<- "EOF"
 #!/bin/bash
-JAVA_HOME=/usr/java/jdk1.8.0_112/
+JAVA_HOME=/usr/java/jdk1.8.0_112
 PATH=$PATH:$JAVA_HOME
 export PATH JAVA_HOME
 export CLASSPATH=.
