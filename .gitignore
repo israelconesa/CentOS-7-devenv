@@ -8,3 +8,5 @@ build.log
 *.vdi
 packer_cache
 .machines
+.directory
+.directory.lock
