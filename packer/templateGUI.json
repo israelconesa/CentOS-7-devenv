@@ -33,12 +33,26 @@
         "NO_PROXY={{user `no_proxy`}}"
       ],
       "scripts": [
+<<<<<<< Updated upstream
         "scripts/01-vagrant.sh"
+=======
+        "scripts/00-proxy.sh"
+      ],
+      "type": "shell"
+    },
+    {
+      "inline": [
+        "yum update -e 0 -y"
+>>>>>>> Stashed changes
       ],
       "type": "shell"
     },
     {
       "scripts": [
+<<<<<<< Updated upstream
+=======
+        "scripts/01-vagrant.sh",
+>>>>>>> Stashed changes
         "scripts/02-docker.sh",
         "scripts/03-java.sh",
         "scripts/04-clean.sh"

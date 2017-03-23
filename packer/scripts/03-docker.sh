@@ -9,7 +9,12 @@ systemctl start docker
 # flush changes to service
 systemctl daemon-reload
 
+<<<<<<< Updated upstream:packer/scripts/03-docker.sh
 # add user to docker group
+=======
+# create docker group and add user
+# groupadd docker
+>>>>>>> Stashed changes:packer/scripts/02-docker.sh
 usermod -aG docker vagrant
 
 # Ensure docker service always starts
